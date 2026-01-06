@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal | Colchonería Jaén</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .legal-container {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .legal-container h1 {
+            color: var(--brand-dark-blue);
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--brand-blue);
+            padding-bottom: 10px;
+        }
+        .legal-container h2 {
+            color: var(--brand-blue);
+            margin-top: 30px;
+            font-size: 1.5rem;
+        }
+        .legal-container p, .legal-container li {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .legal-container ul { margin-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <h2 style="color: white; font-style: italic;" data-dato="nombre">Colchonería Jaén</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo/pantalla_catalogo_inicial.html">Catálogo</a></li>
+            <li><a href="catalogo/paginas_catalogo/ofertas.html">Ofertas</a></li>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+            <li><a href="donde.html">Ubicación</a> </li>
+        </ul>
+        <a href="contacto.html" class="cta-btn">Contacto</a>
+    </nav>
+
+    <div class="legal-container">
+        <h1>Aviso Legal y Condiciones de Uso</h1>
+
+        <h2>1. Datos Identificativos</h2>
+        <p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se reflejan los siguientes datos:</p>
+        <ul>
+            <li><strong>Titular de la web:</strong> <span data-dato="nombre"></span></li>
+            <li><strong>NIF/CIF:</strong> [AQUÍ PON EL NIF O CIF MANUALMENTE]</li>
+            <li><strong>Domicilio:</strong> <span data-dato="direccion"></span>, <span data-dato="ciudad"></span>.</li>
+            <li><strong>Correo electrónico de contacto:</strong> <span data-dato="email"></span></li>
+            <li><strong>Teléfono:</strong> <span data-dato="telefono"></span></li>
+        </ul>
+
+        <h2>2. Usuarios</h2>
+        <p>El acceso y/o uso de este portal de <strong data-dato="nombre"></strong> atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.</p>
+
+        <h2>3. Uso del Portal</h2>
+        <p>Esta página web proporciona el acceso a informaciones, servicios o datos (en adelante, "los contenidos") en Internet pertenecientes a <span data-dato="nombre"></span>. El USUARIO asume la responsabilidad del uso del portal.</p>
+
+        <h2>4. Propiedad Intelectual e Industrial</h2>
+        <p><span data-dato="nombre"></span> por sí o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web, así como de los elementos contenidos en la misma (imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, etc.).</p>
+        <p>Quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de <span data-dato="nombre"></span>.</p>
+
+        <h2>5. Exclusión de Garantías y Responsabilidad</h2>
+        <p><span data-dato="nombre"></span> no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.</p>
+
+        <h2>6. Modificaciones</h2>
+        <p><span data-dato="nombre"></span> se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a través de la misma como la forma en la que éstos aparezcan presentados.</p>
+
+        <h2>7. Enlaces</h2>
+        <p>En el caso de que en la web se dispusiesen enlaces o hipervínculos hacía otros sitios de Internet, <span data-dato="nombre"></span> no ejercerá ningún tipo de control sobre dichos sitios y contenidos.</p>
+
+        <h2>8. Legislación Aplicable y Jurisdicción</h2>
+        <p>La relación entre <span data-dato="nombre"></span> y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Jaén.</p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 style="border:none; color: white;" data-dato="nombre">Colchonería Jaén</h3>
+                <p>Tu descanso es nuestra prioridad. Trabajamos con las mejores marcas (Pikolin, Bultex) para garantizarte dulces sueños.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Dónde Estamos</h3>
+                <p>📍 <strong>Dirección:</strong></p>
+                <p data-dato="direccion"></p>
+                <p data-dato="ciudad"></p>
+            </div>
+            <div class="footer-col">
+                <h3>Horario</h3>
+                <p>L-V: <span data-dato="horarioLunesViernes"></span></p>
+                <p>Sábados: <span data-dato="horarioSabado"></span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 <span data-dato="nombre">Colchonería Jaén</span>. Todos los derechos reservados. | <a href="aviso_legal.html" style="display:inline; color:inherit;">Aviso Legal</a></p>
+        </div>
+    </footer>
+
+    <script src="datos_colchoneria.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dónde Encontrarnos | Colchonería Jaén</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <h2 style="color: var(--brand-blue); font-style: italic;" data-dato="nombre">Colchonería Jaén</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo/pantalla_catalogo_inicial.html">Catálogo</a></li>
+            <li><a href="catalogo/paginas_catalogo/ofertas.html">Ofertas</a></li>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+            <li><a href="donde.html" class="active">Ubicación</a></li>
+        </ul>
+        <a href="contacto.html" class="cta-btn">Contacto</a>
+    </nav>
+
+    <header class="location-hero">
+        <h1 class="animate-text">Ven a probar tu próximo colchón</h1>
+        <p style="color: #666; max-width: 700px; margin: 0 auto;">
+            Nada sustituye la sensación de tumbarse. Visita nuestra exposición en 
+            <strong><span data-dato="direccion"></span></strong>, 
+            donde nuestros expertos te asesorarán sin compromiso.
+        </p>
+    </header>
+
+    <section class="location-grid">
+        
+        <div class="location-details animate-text">
+            <h3 style="margin-bottom: 30px; color: var(--brand-dark-blue); border-bottom: 2px solid #eee; padding-bottom:10px;">
+                Información de Acceso
+            </h3>
+
+            <div class="detail-item">
+                <div class="detail-icon">📍</div>
+                <div class="detail-text">
+                    <h4>Dirección Exacta</h4>
+                    <p data-dato="direccion"></p>
+                    <p data-dato="ciudad"></p>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon">🚗</div>
+                <div class="detail-text">
+                    <h4>¿Vienes en coche?</h4>
+                    <p>Disponemos de <strong>una amplia zona de aparcamiento</strong> en la puerta. Fácil aparcamiento en los alrededores.</p>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon">🚌</div>
+                <div class="detail-text">
+                    <h4>Transporte Público</h4>
+                    <p>Líneas de Autobús cercanas: <strong>Línea 19</strong> (Parada Polígono). Estamos a 2 minutos andando de la parada.</p>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon">♿</div>
+                <div class="detail-text">
+                    <h4>Accesibilidad</h4>
+                    <p>Tienda a pie de calle sin escalones, 100% accesible para sillas de ruedas y carritos de bebé.</p>
+                </div>
+            </div>
+
+            <a href="https://www.google.com/maps/place/COLCHONER%C3%8DA+JA%C3%89N+(PIKOLIN)/@37.7983095,-3.7817216,17.25z/data=!4m6!3m5!1s0xd6dd7a3b0faba05:0x870d328f18e10574!8m2!3d37.7983446!4d-3.7816892!16s%2Fg%2F11n8xv3scy?hl=es&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" target="_blank" class="cta-btn" style="display:inline-block; margin-top:10px; text-align:center;">
+                Ver ruta en GPS
+            </a>
+        </div>
+
+        <div>
+            <h3 style="margin-bottom: 15px; color: var(--brand-dark-blue);">Mapa Interactivo:</h3>
+            
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5763660377224!2d-3.7903268!3d37.7766524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6dd77d56690717%3A0x62804360f046420!2sC.%20Espeluy%2C%2032%2C%2023009%20Ja%C3%A9n!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #888;">*Haz clic en "Ampliar mapa" para ver pantalla completa.</p>
+        </div>
+
+    </section>
+
+    <footer class="footer" id="contacto">
+        <div class="footer-grid">
+            
+            <div class="footer-col">
+                <h2 style="font-style: italic; margin-bottom: 15px;" data-dato="nombre">Colchonería Jaén</h2>
+                <p>Tu descanso es nuestra prioridad. Trabajamos con las mejores marcas (Pikolin, Bultex) para garantizarte dulces sueños.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Dónde Estamos</h3>
+                <p>📍 <strong>Dirección:</strong></p>
+                <p data-dato="direccion"></p> 
+                <p data-dato="ciudad"></p>
+                
+                <p style="margin-top: 15px;">📞 <strong>Teléfono:</strong></p>
+                <a href="#" style="color: inherit; text-decoration: none;" data-dato="telefono"></a>
+                
+                <p style="margin-top: 15px;">📧 <strong>Email:</strong></p>
+                <a href="#" style="color: inherit; text-decoration: underline;" data-dato="email"></a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Horario de Apertura</h3>
+                <p><strong>Lunes a Viernes:</strong></p>
+                <p data-dato="horarioLunesViernes"></p>
+                
+                <p style="margin-top: 10px;"><strong>Sábados:</strong></p>
+                <p data-dato="horarioSabado"></p>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 <span data-dato="nombre">Colchonería Jaén</span>. Todos los derechos reservados. | <a href="aviso_legal.html" style="display:inline; color:inherit;">Aviso Legal</a></p>
+        </div>
+    </footer>
+
+    <script src="datos_colchoneria.js"></script>
+
+</body>
+</html>

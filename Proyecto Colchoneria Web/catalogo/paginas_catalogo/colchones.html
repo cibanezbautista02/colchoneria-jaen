@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colchones | Colchonería Jaén</title>
+    <link rel="stylesheet" href="../../index.css">
+    
+    <style>
+        /* Estilos específicos rápidos para la cabecera de categoría */
+        .category-header {
+            background: linear-gradient(135deg, var(--brand-dark-blue) 0%, var(--brand-blue) 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px 60px;
+            margin-bottom: 50px;
+        }
+        .category-header h1 { font-size: 3rem; margin-bottom: 10px; }
+        
+        /* Rejilla de productos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 0 10% 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Tarjeta de producto */
+        .product-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+            /* Animación de entrada */
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0; 
+        }
+        .product-item:hover { transform: translateY(-10px); }
+        
+        .product-img-box { height: 250px; overflow: hidden; }
+        .product-img-box img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .product-details { padding: 20px; text-align: center; }
+        .product-details h3 { color: var(--brand-dark-blue); margin-bottom: 10px; }
+        .product-details p { color: #666; font-size: 0.9rem; margin-bottom: 15px; height: 40px; }
+        .price-tag { display: block; font-size: 1.3rem; color: var(--brand-blue); font-weight: bold; margin-bottom: 15px; }
+        
+        .btn-product {
+            padding: 10px 25px;
+            background-color: var(--brand-dark-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .btn-product:hover { background-color: var(--brand-blue); }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <h2 style="color: white; font-style: italic;">Colchonería Jaén</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../pantalla_catalogo_inicial.html" class="active">Catálogo</a></li>
+            <li><a href="../paginas_catalogo/ofertas.html">Ofertas</a></li>
+            <li><a href="../../nosotros.html">Acerca de nosotros</a></li>
+            <li><a href="../../donde.html">Ubicación</a> </li>
+        </ul>
+        <a href="../../contacto.html" class="cta-btn">Contacto</a>
+    </nav>
+
+    <header class="category-header">
+        <h1>Colchones</h1>
+        <p>Innovación para tu descanso: muelles ensacados, viscoelástica y materiales premium.</p>
+    </header>
+
+    <section class="products-grid" id="contenedor-productos">
+        </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 style="border:none; color: white;">Colchonería Jaén</h3>
+                <p>Tu descanso es nuestra prioridad. Trabajamos con las mejores marcas (Pikolin, Bultex) para garantizarte dulces sueños.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Dónde Estamos</h3>
+                <p>📍 <strong>Dirección:</strong></p>
+                <p>Polígono Los Olivares, Calle Espeluy 32</p>
+                <p>23009 Jaén, España</p>
+                <p style="margin-top: 15px;">📞 <strong>Teléfono:</strong></p>
+                <p>953 01 68 51</p>
+                <p style="margin-top: 15px;">📧 <strong>Email:</strong></p>
+                <p>info@colchoneriajaen.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Horario</h3>
+                <p>L-V: 9:30 - 13:30 | 17:30 - 20:00</p>
+                <p>Sábados: 10:00 - 13:30</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Colchonería Jaén. | <a href="../../aviso_legal.html" style="display:inline; color:inherit; text-decoration: underline;">Aviso Legal</a></p>
+        </div>
+    </footer>
+
+    <script src="../base_datos.js"></script>
+
+    <script>
+        const contenedor = document.getElementById('contenedor-productos');
+
+        const misAlmohadas = productos.filter(item => item.categoria === 'colchones');
+
+        if (misAlmohadas.length === 0) {
+            contenedor.innerHTML = "<p style='text-align:center; width:100%; grid-column: 1/-1;'>No se encontraron productos en esta categoría.</p>";
+        }
+
+        misAlmohadas.forEach((producto, index) => {
+            
+            const retardo = index * 0.1;
+
+            // 1. TRUNCAR DESCRIPCIÓN
+            // Para que la tarjeta no sea enorme, cortamos el texto si es largo
+            const descripcionCorta = producto.descripcion.length > 60 
+                ? producto.descripcion.substring(0, 60) + '...' 
+                : producto.descripcion;
+
+            const htmlTarjeta = `
+                <article class="product-item" style="animation-delay: ${retardo}s">
+                    <div class="product-img-box">
+                        <img src="${producto.imagen}" alt="${producto.nombre}">
+                    </div>
+                    <div class="product-details">
+                        <h3>${producto.nombre}</h3>
+                        
+                        <p>${descripcionCorta}</p>
+                        
+                        <span class="price-tag">${producto.precio}</span>
+                        
+                        <a href="detalle_producto.html?id=${producto.id}" class="btn-product" style="background: white; color: var(--brand-dark-blue); border: 2px solid var(--brand-dark-blue); margin-bottom: 5px; display: inline-block;">
+                            Ver detalles
+                        </a>
+                    </div>
+                </article>
+            `;
+
+            contenedor.innerHTML += htmlTarjeta;
+        });
+    </script>
+
+</body>
+</html>

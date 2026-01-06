@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Colchonería Jaén</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <h2 style="color: white; font-style: italic;" data-dato="nombre">Colchonería Jaén</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo/pantalla_catalogo_inicial.html">Catálogo</a></li>
+            <li><a href="catalogo/paginas_catalogo/ofertas.html">Ofertas</a></li>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+            <li><a href="donde.html">Ubicación</a> </li>
+        </ul>
+        <a href="contacto.html" class="cta-btn">Contacto</a>
+    </nav>
+
+    <header class="contact-header">
+        <h1>¿Hablamos?</h1>
+        <p style="color: #666; max-width: 600px; margin: 0 auto;">Estamos aquí para resolver tus dudas. Ven a probar nuestros colchones o escríbenos.</p>
+    </header>
+
+    <section class="contact-wrapper">
+        
+        <div class="contact-form-box animate-text">
+            <h3 style="margin-bottom: 20px; color: var(--brand-dark-blue);">Envíanos un mensaje</h3>
+            
+            <form action="mailto:info@colchoneriajaen.com" method="POST" enctype="text/plain">
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="Nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="Email" placeholder="hola@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">¿En qué podemos ayudarte?</label>
+                    <textarea id="mensaje" name="Mensaje" rows="5" placeholder="Estoy buscando un colchón viscoelástico..." required></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">Enviar Mensaje (Abrir Correo)</button>
+            </form>
+        </div>
+
+        <div class="info-map-box">
+            
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div>
+                    <h4 style="margin-bottom: 5px;">Nuestra Ubicación</h4>
+                    <p style="color: #666;">
+                        <span data-dato="direccion"></span><br>
+                        <span data-dato="ciudad"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <div>
+                    <h4 style="margin-bottom: 5px;">Llámanos</h4>
+                    <p style="color: #666;">
+                        <span data-dato="telefono"></span> <br>
+                        <span style="font-size:0.9rem; color:#999;">(Lunes a Sábado)</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📧</div>
+                <div>
+                    <h4 style="margin-bottom: 5px;">Email</h4>
+                    <p style="color: #666;" data-dato="email"></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer" id="contacto">
+        <div class="footer-grid">
+            
+            <div class="footer-col">
+                <h3 style="border:none; color: white;" data-dato="nombre">Colchonería Jaén</h3>
+                <p>Tu descanso es nuestra prioridad. Trabajamos con las mejores marcas (Pikolin, Bultex) para garantizarte dulces sueños.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Dónde Estamos</h3>
+                <p>📍 <strong>Dirección:</strong></p>
+                <p data-dato="direccion"></p>
+                <p data-dato="ciudad"></p>
+                
+                <p style="margin-top: 15px;">📞 <strong>Teléfono:</strong></p>
+                <a href="#" style="color: inherit; text-decoration: none;" data-dato="telefono"></a>
+                
+                <p style="margin-top: 15px;">📧 <strong>Email:</strong></p>
+                <a href="#" style="color: inherit; text-decoration: underline;" data-dato="email"></a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Horario de Apertura</h3>
+                <p><strong>Lunes a Viernes:</strong></p>
+                <p data-dato="horarioLunesViernes"></p>
+                
+                <p style="margin-top: 10px;"><strong>Sábados:</strong></p>
+                <p data-dato="horarioSabado"></p>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 <span data-dato="nombre">Colchonería Jaén</span>. Todos los derechos reservados. | <a href="aviso_legal.html" style="display:inline; color:inherit;">Aviso Legal</a></p>
+        </div>
+    </footer>
+
+    <script src="datos_colchoneria.js"></script>
+
+</body>
+</html>
