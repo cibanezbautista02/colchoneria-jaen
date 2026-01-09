@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros | Colchonería Jaén</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
     <style>
         /* --- ESTILOS ESPECÍFICOS PARA NOSOTROS --- */
         
@@ -173,6 +175,119 @@
             .reverse-mobile { flex-direction: column-reverse; }
             .about-header h1 { font-size: 2.5rem; }
         }
+
+        /* --- Estilos para la Sección de Reseñas --- */
+        .reviews-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9; /* Fondo gris muy suave para diferenciar */
+            text-align: center;
+        }
+
+        .reviews-header {
+            margin-bottom: 40px;
+        }
+
+        .google-rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .google-rating .score {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .google-rating .stars {
+            color: #fbbc04; /* Color amarillo Google */
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Tarjeta individual de reseña */
+        .review-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: left;
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--brand-blue, #0056b3); /* Fallback si la variable falla */
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #555;
+            margin-right: 12px;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .author-info .review-date {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .review-stars {
+            color: #fbbc04;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.5;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        /* Botón secundario para ver más */
+        .secondary-btn {
+            background-color: white;
+            color: #333;
+            border: 2px solid #ddd;
+            padding: 10px 25px;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .secondary-btn:hover {
+            border-color: var(--brand-blue, #0056b3);
+            color: var(--brand-blue, #0056b3);
+        }
     </style>
 </head>
 <body>
@@ -285,21 +400,28 @@
         </div>
     </section>
 
-    <section class="values-grid">
-        <div class="value-card reveal-text">
-            <div class="value-icon">🚚</div>
-            <h3>Transporte y Montaje</h3>
-            <p>Servicio integral en Jaén y provincia. Te lo llevamos, lo montamos y retiramos el antiguo.</p>
+    <section class="reviews-section">
+        <div class="reviews-header">
+            <h2 style="color: var(--brand-dark-blue);">Lo que dicen nuestros clientes</h2>
+            <div class="google-rating">
+                <span class="score">5</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="total-reviews">Basado en reseñas de Google</span>
+            </div>
         </div>
-        <div class="value-card reveal-text" style="transition-delay: 0.2s;">
-            <div class="value-icon">🛡️</div>
-            <h3>Garantía Oficial</h3>
-            <p>Al ser distribuidores autorizados Pikolin y Bultex, cuentas con la garantía total del fabricante.</p>
-        </div>
-        <div class="value-card reveal-text" style="transition-delay: 0.4s;">
-            <div class="value-icon">💶</div>
-            <h3>Financiación a Medida</h3>
-            <p>Paga tu descanso cómodamente. Consulta nuestras condiciones de financiación sin intereses.</p>
+
+        <div class="reviews-grid" id="reviews-container"></div>
+
+        <div class="reviews-cta">
+            <a href="https://www.google.com/search?q=COLCHONER%C3%8DA%20JA%C3%89N%20%28PIKOLIN%29%20Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2NDc2NLGwtDS1tLQ0MzMyMrQ028DI-IpR1dnfx9nD38816HCvo4KX4-FOPwWNAE9vfx9PP02FoNTi1MMbE4sXsRKnDgB3xVk-agAAAA&rldimm=9731489959996622196&tbm=lcl&hl=es&sa=X&ved=0CAcQ5foLahcKEwiI4f2E9P6RAxUAAAAAHQAAAAAQCQ&biw=767&bih=695&dpr=1.25&aic=0#lkt=LocalPoiReviews&arid=ChZDSUhNMG9nS0VJQ0FnSUNaeE0tMFlnEAE" target="_blank" class="cta-btn secondary-btn">
+                <i class="fa-brands fa-google"></i> Ver todas las reseñas
+            </a>
         </div>
     </section>
 
